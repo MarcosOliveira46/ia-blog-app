@@ -1,23 +1,20 @@
 import React from 'react';
 import './App.css';
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import LayoutContent from './Components/Layout';
+import LandingPage from './Pages/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <LayoutContent>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          {/* <Route path="/sobre" element={<AboutUs />} /> */}
+          <Route path="*" element={<div>Not Found</div>} />
+        </Routes>
+      </LayoutContent>
+    </BrowserRouter>
   );
 }
 
