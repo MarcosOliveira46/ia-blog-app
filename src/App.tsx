@@ -10,8 +10,10 @@ function App() {
       <LayoutContent>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/contacts" element={<LandingPage />} />
+          <Route path="/aboutUs" element={<LandingPage />} />
           {/* <Route path="/sobre" element={<AboutUs />} /> */}
-          <Route path="*" element={<div>Not Found</div>} />
+          <Route path="*" element={<p>Not Found</p>} />
         </Routes>
       </LayoutContent>
     </BrowserRouter>
